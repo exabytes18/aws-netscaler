@@ -1,0 +1,58 @@
+# Create a VPC (use VPC wizard and select "Single Public Subnet Only")
+
+# Create 3 new subnets (10.0.1.0/24, 10.0.2.0/24, 10.0.3.0/24)
+#   10.0.1.0/24: Management subnet
+#   10.0.2.0/24: Client-side (VIPs)
+#   10.0.3.0/24: Server-side (SNIPs... note, SNIPs are not server-ips...
+#                             they're just ips that netscaler uses to talk to
+#                             servers in the respective subnets)
+
+# Associate the new subnets with a routing table that has an internet gateway
+#   (instances in subnets without an internet gateway won't be able to talk to the outside world)
+
+# Create a security group that allows all traffic IN and all traffic OUT (obviously, this is just for testing).
+
+# Create Netscaler instance
+ec2-run-instances ami-5794153e -n 1 -t m1.large -k "matt@calumet" -a :0:subnet-55af4434:"NSIP":10.0.1.21:sg-c216b7ad -a :1:subnet-2baf444a:"CLIENT-SIDE":10.0.2.21:sg-c216b7ad:true::10.0.2.22,10.0.2.23,10.0.2.24 -a :2:subnet-0faf446e:"SERVER-SIDE":10.0.3.21:sg-c216b7ad:true::10.0.3.22,10.0.3.23,10.0.3.24
+
+# Create a new instance in the VPC in the management subnet
+#   Give it an elastic IP, then ssh to the elastic IP
+#   Once you're ssh'd into the instance, ssh into the netscaler
+#       (don't expose the management IP (first NIC's primary IP) to the outside
+#        world... management console is initially unprotected)
+#   netscaler username:password::nsroot:nsroot
+
+enable feature lb
+enable feature cs
+enable ns mode usnip
+enable ns mode mbf
+
+add ns ip 10.0.3.21 255.255.255.0 -type SNIP
+add ns ip 10.0.2.21 255.255.255.0 -type VIP
+
+# List IPs
+show ns ip
+
+add server testserver 10.0.3.134
+add service testserver-80 testserver HTTP 80 -gslb NONE -maxClient 1024 -maxReq 0 -cip DISABLED -usip NO -useproxyport YES -sp ON -cltTimeout 180 -svrTimeout 360 -CKA NO -TCPB NO -CMP NO -downStateFlush DISABLED
+add lb vserver testserver-lb HTTP 0.0.0.0 0 -persistenceType NONE -cltTimeout 180 -downStateFlush DISABLED
+add cs vserver testserver-cs HTTP 10.0.2.21 80 -cltTimeout 180
+bind lb vserver testserver-lb testserver-80
+bind cs vserver testserver-cs -lbvserver testserver-lb
+
+save config
+
+
+
+# Create another Elastic IP
+#     Connect it with a VIP (i.e., some IP in 10.0.2.0/24 client-side subnet)
+
+
+# Random notes:
+#     Type "reboot" to reboot (you'll be prompted to make sure you really want to reboot)
+#         Rebooting is slow... it could take several minutes for the netscaler to come back.
+#     Type "shell" to drop down into a real shell with root access
+
+
+http://support.citrix.com/proddocs/topic/netscaler-vpx-10/nsvpx-launch-aws-ami-gui-cli-con.html
+https://aws.amazon.com/marketplace/pp/B00A9ZNGJI/ref=sp_mpg_product_title?ie=UTF8&sr=0-7
