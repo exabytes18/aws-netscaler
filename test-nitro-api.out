@@ -1,0 +1,506 @@
+Creating server
+
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.034s
+user	0m0.000s
+sys	0m0.004s
+
+Binding service to lb
+
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.048s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.036s
+user	0m0.000s
+sys	0m0.004s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+Creating service
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.034s
+user	0m0.000s
+sys	0m0.004s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+Creating service
+
+real	0m0.033s
+user	0m0.004s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.033s
+user	0m0.000s
+sys	0m0.004s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+Creating service
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.034s
+user	0m0.000s
+sys	0m0.004s
+
+Binding service to lb
+
+real	0m0.037s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.038s
+user	0m0.000s
+sys	0m0.004s
+
+Binding service to lb
+
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.037s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.035s
+user	0m0.008s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.037s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.000s
+sys	0m0.004s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.036s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.037s
+user	0m0.000s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.037s
+user	0m0.004s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Creating server
+
+real	0m0.035s
+user	0m0.004s
+sys	0m0.000s
+
+Creating service
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.000s
+
+Binding service to lb
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.000s
+
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+Deleting server
+{ "errorcode": 0, "message": "Done", "severity": "NONE" }
+real	0m0.034s
+user	0m0.004s
+sys	0m0.000s
+
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2

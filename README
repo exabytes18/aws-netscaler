@@ -13,14 +13,17 @@
 # Create a security group that allows all traffic IN and all traffic OUT (obviously, this is just for testing).
 
 # Create Netscaler instance
-ec2-run-instances ami-5794153e -n 1 -t m1.large -k "matt@calumet" -a :0:subnet-55af4434:"NSIP":10.0.1.21:sg-c216b7ad -a :1:subnet-2baf444a:"CLIENT-SIDE":10.0.2.21:sg-c216b7ad:true::10.0.2.22,10.0.2.23,10.0.2.24 -a :2:subnet-0faf446e:"SERVER-SIDE":10.0.3.21:sg-c216b7ad:true::10.0.3.22,10.0.3.23,10.0.3.24
+ec2-run-instances --aws-access-key="..." --aws-secret-key="..." --region=us-west-1 ami-c6467ba6 -n 1 -t m3.xlarge -k "exabytes18@geneva" -a :0:subnet-39877062:"NSIP-IF":10.0.1.21:sg-252a7d43 -a :1:subnet-848374df:"CLIENT-SIDE-IF":10.0.2.21:sg-252a7d43:true::10.0.2.22,10.0.2.23,10.0.2.24 -a :2:subnet-4583741e:"SERVER-SIDE-IF":10.0.3.21:sg-252a7d43:true::10.0.3.22,10.0.3.23,10.0.3.24
 
 # Create a new instance in the VPC in the management subnet
 #   Give it an elastic IP, then ssh to the elastic IP
 #   Once you're ssh'd into the instance, ssh into the netscaler
 #       (don't expose the management IP (first NIC's primary IP) to the outside
 #        world... management console is initially unprotected)
-#   netscaler username:password::nsroot:nsroot
+#
+#   The default password is set to the netscaler's instance id.
+#       username: nsroot
+#       password: i-00000000000000000
 
 enable feature lb
 enable feature cs
